@@ -178,6 +178,8 @@ I have also compiled this as a readme over my GitHub. Fancy checking it out? her
 
 **Github URL for this article 💻**
 
+[Github Repo](https://github.com/devangtomar/medium-linux-commands)
+
 **Let’s connect and chat! Open to anything under the sun 🏖️🍹**
 
 **🐦 Twitter :** [devangtomar7](https://twitter.com/devangtomar7)
