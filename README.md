@@ -15,6 +15,8 @@ Today we’ll look at some lesser-known linux commands that will get your termin
 
 Screen is a full-screen window manager that creates a single window with a running shell and allows multiple screen windows to run within the same session. It’s most useful when you’re running a long remote task and are concerned about your SSH session terminating and ruining everything. Screen will continue to run your commands even if you disconnect and the window is not visible to you.
 
+
+```bash
 \# Starting a screen session
 screen 
 
@@ -22,17 +24,23 @@ screen
 screen -ls
 
 \# Attaching to screen session
-screen -r 
+screen -r
+```
+
 
 **Wall 🧱**
 
 Wall is a command-line utility that displays a message on all logged-in users’ terminals. Messages can be typed into a terminal or the contents of a file. To send a message to a specific user, use the write command instead of the wall command.
 
+
+```bash
 \# This option will suppress the banner.
 wall -n
 
 \# To broadcase certain message
 wall "Cleanup window currently running!"
+```
+
 
 *Broadcast message from devang@localhost:* Cleanup window currently running!
 
@@ -42,6 +50,8 @@ wall "Cleanup window currently running!"
 
 The ncdu command provides a quick, convenient view for disk usage. The ncdu command displays disc usage in a useful and convenient manner. The name is an abbreviation for “NCurses disc usage.” This means that it is based on ncurses, which is a terminal control library used on Unix/Linux systems like curses. You can use it to see what directories are using the most disk space quickly and easily.
 
+
+```bash
 \# For opening ncdu help
 ncdu --help
 
@@ -63,6 +73,7 @@ ncdu
 `  `--exclude-caches           Exclude directories containing CACHEDIR.TAG
 `  `--confirm-quit             Confirm quitting ncdu
 `  `--color SCHEME             Set color scheme
+```
 
 **Netcat 🐈**
 
