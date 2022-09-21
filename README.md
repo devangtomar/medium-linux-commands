@@ -79,6 +79,7 @@ ncdu
 
 Netcat, or nc, is primarily used for port scanning, but it is also an excellent utility networking tool for system administrators to have on hand for any task. Netcat can scan for ports, copy files, forward ports, connect to proxy servers, and host websites… It’s safe to say that it’s extremely adaptable.
 
+```bash
 \# Scan a single port
 nc -v -w 3 z 192.168.16.1 22     
 
@@ -87,6 +88,7 @@ $ nc -v -w 2 z 192.168.56.1 22 80
 
 \# Scan range of ports
 $ nc -v -w 2 z 192.168.56.1 20-25
+```
 
 ![](./images/Aspose.Words.a30dbeda-95af-4a58-8a28-92ac095a6b0c.004.png)
 
@@ -98,8 +100,10 @@ When was the last time you deleted a file from your Linux system? How did you ma
 
 This small utility will securely erase a file by writing random data over top of it multiple times.
 
+```bash
 \# For shredding a particular file
 shred -u <filename>
+```
 
 **Split 🖖**
 
@@ -107,11 +111,14 @@ Simple, effective, and even more adaptable than a command with a similar name in
 
 Large files are split into smaller files using Linux. It divides files into 1000 lines (by default) and allows users to change the number of lines as needed.
 
+```bash
 \# Spliting file based on n.o of lines
 split -l 6 random.txt split\_file
 
 \# Spliting file based on n.o of bytes
 split -b 16 index.txt index
+```
+
 
 **tc 🚦**
 
@@ -121,16 +128,22 @@ Tc is used in the Linux kernel to configure Traffic Control. The following are t
 
 Traffic control (tc) is an extremely useful Linux utility that allows you to configure the kernel packet scheduler. If you’re looking for reasons to fiddle with the kernel scheduler, here are a few: First, it’s fun to experiment with the various options and become acquainted with all of Linux’s features. Furthermore, you can use Linux’s useful tools to simulate packet delay and loss for UDP or TCP applications, or limit the bandwidth usage of a specific service to simulate Internet connections (DSL, Cable, T1, etc).
 
+
+```bash
 \# Set a delay of 100ms and random +-10ms uniform distribution
 tc qdisc change dev eth0 root netem delay 100ms 10ms
 
 \# limit the egress bandwidth we can use the following command
 tc qdisc add dev eth0 root tbf rate 1mbit burst 32kbit latency 400ms
+```
+
 
 **Tcpdump 🗑️**
 
 Used to record and analyse traffic to and from your system. It is a powerful and versatile tool that specialises in network debugging and troubleshooting but can also be used as a security tool.
 
+
+```bash
 \# To capture specific number of packets
 sudo tcpdump -c 4 -i eth0
 
@@ -139,6 +152,7 @@ sudo tcpdump -D
 
 \# To capture packets with ip address
 sudo tcpdump -n -i wlo1
+```
 
 **Xargs 🤌**
 
@@ -148,11 +162,13 @@ The xargs command constructs and executes commands entered via standard input. I
 
 This feature is especially useful in file management, where xargs is used in conjunction with rm, cp, mkdir, and other commands of a similar nature.
 
+```bash
 \# To generate a compact list of all Linux user accounts
 cut -d: -f1 < /etc/passwd | sort | xargs
 
 \# To find file(s) in a directory and delete them as well
 find /Users/yourusername -name "random" -type d -print0 | xargs -0 -t /bin/rm -rf "{}"
+```
 
 **lsof 📂**
 
@@ -160,8 +176,10 @@ As we all know, Linux/Unix treats everything as if it were a file (pipes, socket
 
 lsof is a single command that serves a single purpose: listing open files. This is especially useful when dealing with mounting issues that indicate that files are being used. This command quickly determines which files are currently being used by which processes.
 
+```bash
 \# Yup that's it.. 😇
 lsof
+```
 
 **htop ⚙️**
 
@@ -171,12 +189,14 @@ In a Linux system, the htop command is a command-line utility that allows the us
 
 htop supports mouse operation, outputs in colour, and provides visual indications of processor, memory, and swap usage. htop also prints full command lines for processes and allows for vertical and horizontal scrolling for processes and command lines.
 
+```bash
 \# **-d –delay :** Used to show the delay between updates, in tenths of seconds.
 \# **-C –no-color –no-colour** : Start htop in monochrome mode.
 \# **-h –help :** Used to display the help message and exit.
 \# **-u –user=USERNAME :** Used to show only the processes of a given user.
 
 htop -u yourUsername
+```
 
 -----
 That concludes some of the useful options of common Linux commands you should have been aware of earlier. I’m always amazed by Linux commands when I come across these hidden gems.
