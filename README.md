@@ -3,7 +3,7 @@
 
 Linux is an operating system (OS) for computers, servers, mainframes, mobile devices, and embedded devices that is Unix-like, open source, and community-developed. It is one of the most widely supported operating systems, with support for almost every major computer platform, including x86, ARM, and SPARC.
 
-![](./images/Aspose.Words.a30dbeda-95af-4a58-8a28-92ac095a6b0c.001.jpeg)
+<img src="./images/Aspose.Words.a30dbeda-95af-4a58-8a28-92ac095a6b0c.001.jpeg" width="400" height="500">
 
 Until recently, Linux was primarily used for servers and was not considered suitable for desktop computers. However, its user interface and ease of use have steadily improved in recent years. Linux is now user-friendly enough to replace Windows on desktop computers. It is used by hundreds of thousands of people all over the world.
 
